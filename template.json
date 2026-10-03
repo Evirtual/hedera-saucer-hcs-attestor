@@ -1,0 +1,20 @@
+{
+  "name": "SaucerSwap HCS Price Attestor",
+  "slug": "saucerswap-hcs-price-attestor",
+  "description": "Scaffold-HBAR template that reads a live SaucerSwap market quote and anchors a normalized price observation to Hedera Consensus Service for verifiable downstream consumption.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "network": "testnet",
+  "capabilities": ["hcs", "mirror-node", "saucerswap-readonly"],
+  "packages": {
+    "frontend": "packages/nextjs",
+    "contracts": "packages/hardhat"
+  },
+  "requiredEnv": ["HEDERA_ACCOUNT_ID", "HEDERA_PRIVATE_KEY", "HEDERA_TOPIC_ID"],
+  "optionalEnv": ["SAUCERSWAP_API_BASE_URL"],
+  "coreRoutes": ["/", "/attestations"],
+  "acceptance": {
+    "requiresTestnetTransaction": true,
+    "requiresMirrorNodeEvidence": true
+  }
+}
