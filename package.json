@@ -1,0 +1,21 @@
+{
+  "name": "saucerswap-hcs-price-attestor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "bin": {
+    "saucer-attest": "./src/cli.js"
+  },
+  "scripts": {
+    "attest": "node ./src/cli.js",
+    "build": "npm run build -w @attestor/nextjs",
+    "lint": "npm run lint -w @attestor/nextjs",
+    "test": "npm run test -w @attestor/nextjs",
+    "dev": "npm run dev -w @attestor/nextjs"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.72.0",
+    "dotenv": "^17.2.2"
+  }
+}
