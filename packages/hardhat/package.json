@@ -1,0 +1,1 @@
+{"name":"@attestor/hardhat","version":"0.1.0","private":true,"scripts":{"build":"hardhat compile","test":"hardhat test"},"devDependencies":{"hardhat":"^2.26.3"}}
